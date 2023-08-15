@@ -12,9 +12,9 @@ export default (name) => {
   while (count > 0) {
     const num = getRandomInt();
     const quest = readlineSync.question(`Question: ${num}\nYour answer: `);
-    const answer = () => isEven(num) ? 'yes' : 'no';
+    const answer = () => (isEven(num) ? 'yes' : 'no');
     if (answer() === quest) {
-      console.log('Correct!')
+      console.log('Correct!');
       count -= 1;
     } else {
       console.log(`"${quest}" is wrong answer ;(. Correct answer was "${answer()}".`);

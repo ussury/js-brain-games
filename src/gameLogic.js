@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default (name, f) => {
+export const gameLogic = (name, f) => {
   let count = 3;
   while (count > 0) {
     const randomExpression = f();
@@ -17,3 +17,5 @@ export default (name, f) => {
   }
   return console.log(`Congratulations, ${name}`);
 };
+
+export const getRandomInt = (num) => Math.floor(Math.random() * num);
